@@ -4,7 +4,7 @@ import sr from '@utils/sr';
 import { srConfig, email } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
-const { colors, fontSizes, fonts } = theme;
+const { colors } = theme;
 
 const StyledContainer = styled(Section)`
   text-align: center;
@@ -14,33 +14,16 @@ const StyledContainer = styled(Section)`
     ${mixins.inlineLink};
   }
 `;
-const StyledHeading = styled(Heading)`
-  display: block;
-  color: ${colors.green};
-  font-size: ${fontSizes.md};
-  font-family: ${fonts.SFMono};
-  font-weight: normal;
-  margin-bottom: 20px;
-  justify-content: center;
-  ${media.desktop`font-size: ${fontSizes.sm};`};
-  &:before {
-    bottom: 0;
-    font-size: ${fontSizes.sm};
-    ${media.desktop`font-size: ${fontSizes.smish};`};
-  }
-  &:after {
-    display: none;
-  }
-`;
 const StyledTitle = styled.h4`
   margin: 0 0 20px;
   font-size: 60px;
+  color: ${colors.purple};
   ${media.desktop`font-size: 50px;`};
   ${media.tablet`font-size: 40px;`};
 `;
 const StyledEmailLink = styled.a`
   ${mixins.bigButton};
-  margin-top: 50px;
+  margin-top: 30px;
 `;
 
 const Contact = ({ data }) => {
@@ -51,15 +34,15 @@ const Contact = ({ data }) => {
 
   return (
     <StyledContainer id="contact" ref={revealContainer}>
-      <StyledHeading>What&apos;s Next?</StyledHeading>
 
       <StyledTitle>{title}</StyledTitle>
 
       <div dangerouslySetInnerHTML={{ __html: html }} />
 
-      <StyledEmailLink href={`mailto:${email}`} target="_blank" rel="nofollow noopener noreferrer">
+      <StyledEmailLink href={`https://mail.google.com/mail/?view=cm&to=${email}`} target="_blank" rel="nofollow noopener noreferrer">
         {buttonText}
       </StyledEmailLink>
+
     </StyledContainer>
   );
 };

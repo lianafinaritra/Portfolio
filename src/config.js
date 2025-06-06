@@ -1,38 +1,28 @@
 module.exports = {
-  siteTitle: 'Yashita Namdeo',
+  siteTitle: 'Liana Finaritra',
   siteDescription:
-    'Yashita Namdeo is an incoming Software Developer, based in India, who loves learning new things and helping tech beginners.',
+    '',
   siteKeywords:
-    'Yashita Namdeo, Yashita, Namdeo, yashitanamdeo, software engineer, web developer, javascript, python, java, svvv, indore',
-  siteUrl: 'https://yashitanamdeo.github.io/',
+    'Liana Finaritra, Liana, Finaritra, lianafinaritra',
+  siteUrl: 'https://github.com/lianafinaritra',
   siteLanguage: 'en_US',
-  googleAnalyticsID: 'UA-45666519-2',
-  googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
-  name: 'Yashita Namdeo',
-  location: 'Indore, India',
-  email: 'yashita.namdeo2000@gmail.com',
-  github: 'https://github.com/yashitanamdeo',
+  name: 'Liana Finaritra',
+  location: 'Antananarivo, Madagascar',
+  email: 'hei.finaritra@gmail.com',
+  github: 'https://github.com/lianafinaritra',
   twitterHandle: '@',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/yashitanamdeo',
+      url: 'https://github.com/lianafinaritra',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/yashitanamdeo/',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/yashitanamdeo',
+      url: 'https://www.linkedin.com/in/liana-finaritra-ratovonanahary-10021b240/',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/yashitanamdeo',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/',
+      url: 'https://www.instagram.com/liana_andrianina/',
     },
   ],
 

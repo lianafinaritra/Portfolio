@@ -30,9 +30,13 @@ const StyledList = styled.ul`
 `;
 const StyledLink = styled.a`
   padding: 10px;
+  color: ${colors.purple};
   &:hover,
   &:focus {
-    transform: translateY(-3px);
+    color: ${colors.slate};
+    svg{
+      transform: translateY(-3px);
+    } 
   }
   svg {
     width: 25px;

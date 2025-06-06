@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
@@ -37,17 +36,12 @@ const StyledTagsContainer = styled(Main)`
       .subtitle {
         color: ${colors.slate};
         font-size: ${fontSizes.sm};
-
-        .tag {
-          margin-right: 10px;
-        }
       }
     }
   }
 `;
 
-const TagTemplate = ({ pageContext, data, location }) => {
-  const { tag } = pageContext;
+const TagTemplate = ({ data, location }) => {
   const { edges } = data.allMarkdownRemark;
 
   return (
@@ -59,15 +53,12 @@ const TagTemplate = ({ pageContext, data, location }) => {
         </span>
 
         <h1>
-          <span>#{tag}</span>
-          <span>
-            <Link to="/pensieve/tags">View all tags</Link>
-          </span>
+          <span>Memories</span>
         </h1>
 
         <ul className="fancy-list">
           {edges.map(({ node }) => {
-            const { title, slug, date, tags } = node.frontmatter;
+            const { title, slug, date } = node.frontmatter;
             return (
               <li key={slug}>
                 <h2>
@@ -81,14 +72,6 @@ const TagTemplate = ({ pageContext, data, location }) => {
                       day: 'numeric',
                     })}
                   </time>
-                  <span>&nbsp;&mdash;&nbsp;</span>
-                  {tags &&
-                    tags.length > 0 &&
-                    tags.map((tag, i) => (
-                      <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
-                        #{tag}
-                      </Link>
-                    ))}
                 </p>
               </li>
             );
@@ -102,9 +85,6 @@ const TagTemplate = ({ pageContext, data, location }) => {
 export default TagTemplate;
 
 TagTemplate.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
-  }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
@@ -113,6 +93,8 @@ TagTemplate.propTypes = {
           node: PropTypes.shape({
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
+              date: PropTypes.string.isRequired,
+              slug: PropTypes.string.isRequired,
             }),
           }),
         }).isRequired,
@@ -123,21 +105,17 @@ TagTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query($tag: String!) {
+  {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {
         node {
           frontmatter {
             title
-            description
             date
-            slug
-            tags
           }
         }
       }

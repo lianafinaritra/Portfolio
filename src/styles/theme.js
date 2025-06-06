@@ -3,6 +3,8 @@ import { hex2rgba } from '@utils';
 const ACCENT = '#64ffda';
 const DARK_BG = '#020c1b';
 const BG = '#0a192f';
+const LIGHT_BG = '#ffffff';
+const GREEN_FONT = '#1ec0be';
 
 const theme = {
   colors: {
@@ -14,7 +16,16 @@ const theme = {
     lightSlate: '#a8b2d1',
     lightestSlate: '#ccd6f6',
     white: '#e6f1ff',
+    whiteBright: LIGHT_BG,
     green: ACCENT,
+    lightGreen: GREEN_FONT,
+    grey: '#575757',
+    ligthGrey: '#777777',
+    dark: '#444c52',
+    blue: '#474bd1',
+    darkBlue: '#15176d',
+    darkPurple: '#692983',
+    purple: '#7F2CA4',
     transGreen: hex2rgba(ACCENT, 0.07),
     shadowNavy: hex2rgba(DARK_BG, 0.7),
   },

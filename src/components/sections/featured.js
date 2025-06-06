@@ -24,18 +24,10 @@ const StyledContent = styled.div`
   `};
   ${media.phablet`padding: 30px 25px 20px;`};
 `;
-const StyledLabel = styled.h4`
-  font-size: ${fontSizes.smish};
-  font-weight: normal;
-  color: ${colors.green};
-  font-family: ${fonts.SFMono};
-  margin-top: 10px;
-  padding-top: 0;
-`;
 const StyledProjectName = styled.h5`
   font-size: 28px;
   margin: 0 0 20px;
-  color: ${colors.lightestSlate};
+  color: ${colors.slate};
   ${media.tablet`font-size: 24px;`};
   ${media.thone`color: ${colors.white};`};
   a {
@@ -47,8 +39,8 @@ const StyledDescription = styled.div`
   position: relative;
   z-index: 2;
   padding: 25px;
-  background-color: ${colors.lightNavy};
-  color: ${colors.lightSlate};
+  background-color: ${colors.white};
+  color: ${colors.slate};
   font-size: ${fontSizes.lg};
   border-radius: ${theme.borderRadius};
   ${media.thone`
@@ -78,7 +70,7 @@ const StyledTechList = styled.ul`
   li {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.smish};
-    color: ${colors.green};
+    color: ${colors.slate};
     margin-right: ${theme.margin};
     margin-bottom: 7px;
     white-space: nowrap;
@@ -86,7 +78,7 @@ const StyledTechList = styled.ul`
       margin-right: 0;
     }
     ${media.thone`
-      color: ${colors.green};
+      color: ${colors.purple};
       margin-right: 10px;
     `};
   }
@@ -97,12 +89,19 @@ const StyledLinkWrapper = styled.div`
   position: relative;
   margin-top: 10px;
   margin-left: -10px;
-  color: ${colors.lightestSlate};
+  color: ${colors.dark};
   a {
     padding: 10px;
+    color: ${colors.dark};
+    transition: color 0.3s ease;
+    &:hover {
+      color: ${colors.slate};
+    }
     svg {
       width: 22px;
       height: 22px;
+      fill: currentColor;
+      transition: fill 0.3s ease;
     }
   }
 `;
@@ -112,13 +111,9 @@ const StyledFeaturedImg = styled(Img)`
   vertical-align: middle;
   border-radius: ${theme.borderRadius};
   position: relative;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1) brightness(90%);
   ${media.tablet`
-    object-fit: cover;
     width: auto;
     height: 100%;
-    filter: grayscale(100%) contrast(1) brightness(80%);
   `};
 `;
 const StyledImgContainer = styled.a`
@@ -137,7 +132,7 @@ const StyledImgContainer = styled.a`
   `};
   &:hover,
   &:focus {
-    background: transparent;
+    background-color: ${colors.navy};
     &:before,
     ${StyledFeaturedImg} {
       background: transparent;
@@ -155,7 +150,6 @@ const StyledImgContainer = styled.a`
     bottom: 0;
     z-index: 3;
     transition: ${theme.transition};
-    background-color: ${colors.navy};
     mix-blend-mode: screen;
   }
 `;
@@ -216,7 +210,7 @@ const Featured = ({ data }) => {
 
   return (
     <StyledContainer id="projects">
-      <Heading ref={revealTitle}>Some Things I&apos;ve Built</Heading>
+      <Heading ref={revealTitle}>Contribution</Heading>
 
       <div>
         {featuredProjects &&
@@ -227,7 +221,6 @@ const Featured = ({ data }) => {
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <StyledContent>
-                  <StyledLabel>Featured Project</StyledLabel>
                   <StyledProjectName>
                     {external ? (
                       <a
@@ -257,15 +250,6 @@ const Featured = ({ data }) => {
                         rel="nofollow noopener noreferrer"
                         aria-label="GitHub Link">
                         <FormattedIcon name="GitHub" />
-                      </a>
-                    )}
-                    {external && (
-                      <a
-                        href={external}
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                        aria-label="External Link">
-                        <FormattedIcon name="External" />
                       </a>
                     )}
                   </StyledLinkWrapper>

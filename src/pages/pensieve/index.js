@@ -193,18 +193,14 @@ export default PensievePage;
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/posts/" }, frontmatter: { draft: { ne: true } } }
+      filter: { fileAbsolutePath: { regex: "/posts/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
           frontmatter {
             title
-            description
-            slug
             date
-            tags
-            draft
           }
           html
         }

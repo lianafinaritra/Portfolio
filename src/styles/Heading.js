@@ -11,6 +11,7 @@ const Heading = styled.h3`
   width: 100%;
   white-space: nowrap;
   font-size: ${fontSizes.h3};
+  color: ${colors.purple};
   ${media.tablet`font-size: 24px;`};
 
   &:before {
@@ -19,7 +20,7 @@ const Heading = styled.h3`
     margin-right: 10px;
     font-family: ${fonts.SFMono};
     font-weight: normal;
-    color: ${colors.green};
+    color: ${colors.purple};
     font-size: ${fontSizes.xl};
     position: relative;
     bottom: 4px;
@@ -31,7 +32,7 @@ const Heading = styled.h3`
     display: block;
     height: 1px;
     width: 300px;
-    background-color: ${colors.lightestNavy};
+    background-color: ${colors.dark};
     position: relative;
     top: -5px;
     margin-left: 20px;

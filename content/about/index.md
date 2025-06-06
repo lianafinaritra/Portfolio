@@ -1,22 +1,14 @@
 ---
-title: 'About Me'
+title: 'À propos'
 avatar: 'me.jpg'
-skills:
-  - Coding
-  - Reading
-  - Painting
-  - Crafting
-  - Problem Solving
-  - Team Management
-  - Mentoring
+skills: ''
 ---
 
-Hello! I'm Yashita Namdeo, from Indore, also known as Mini Mumbai and the Cleanest City of India.
+Hello! Je m'appelle Liana Finaritra, je viens d'Antananarivo, la capitale de Madagascar.
 
-I am a creative, time punctual, dedicated, goal-oriented individual with decent moral Values and Ethicates along with a high-energy level, honed communication skills, strong organizational skills, and meticulous attention to detail.
+Je suis un développeur full-stack avec 3 ans d’expérience, j’ai eu l’occasion de
+travailler sur des projets variés que ce soit en back-end, en front-end ou encore en environnement mobile.
 
-I am pursuing my Bachelors from [SVVV, Indore](https://www.svvv.edu.in/) in Computer Science and Engineering (2018-2022) my current GPA is [3.7]() out of 4.
+J'ai obtenu mon diplome de license à la [Haute Ecole d'Informatique, Madagascar](https://www.hei.school/) en Ecosystème Logiciel (2021-2024).
 
-I am a member of [Developer Student Club - SVVV](https://dsc.community.dev/shri-vaishnav-vidyapeeth-vishwavidyalaya/) and have also been awarded 75% Merit Scholarship(Top 10%) by my college.
-
-Here are a few of the other activities that I love to do!
+Ce que j’aime dans ce métier, c’est décortiquer les problèmes complexes et le fait de me dépasser constamment, le tout avec une énergie positive.
