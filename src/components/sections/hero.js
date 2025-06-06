@@ -153,7 +153,7 @@ const Hero = ({ data }) => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/CV.pdf';
-    link.download = 'Liana_Finaritra_.pdf';
+    link.download = 'Liana_Finaritra_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
